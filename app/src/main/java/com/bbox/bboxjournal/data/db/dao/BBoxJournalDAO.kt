@@ -7,12 +7,12 @@ import com.bbox.bboxjournal.data.db.model.JournalEntityModel
 interface BBoxJournalDAO {
 
     @Insert(onConflict = OnConflictStrategy.ABORT)
-    fun insertJournal(journal: JournalEntityModel)
+    suspend fun insertJournal(journal: JournalEntityModel)
 
     @Query("SELECT * FROM journal")
-    fun getAllJournals(): List<JournalEntityModel>
+    suspend fun getAllJournals(): List<JournalEntityModel>
 
     @Delete
-    fun deleteJournal(journal: JournalEntityModel)
+    suspend fun deleteJournal(journal: JournalEntityModel)
 
 }
