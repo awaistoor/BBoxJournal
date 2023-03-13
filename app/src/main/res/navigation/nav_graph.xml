@@ -8,5 +8,22 @@
     <fragment
         android:id="@+id/HomeFragment"
         android:name="com.bbox.bboxjournal.presentation.home.ui.HomeFragment"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_HomeFragment_to_AddNoteFragment"
+            app:destination="@id/AddNoteFragment" />
+        <action
+            android:id="@+id/action_HomeFragment_to_DetailFragment"
+            app:destination="@id/DetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/DetailFragment"
+        android:name="com.bbox.bboxjournal.presentation.detail.ui.DetailFragment"
+        tools:layout="@layout/fragment_detail" />
+    <fragment
+        android:id="@+id/AddNoteFragment"
+        android:name="com.bbox.bboxjournal.presentation.addnote.ui.AddNoteFragment"
+        tools:layout="@layout/fragment_add_note" />
+
 </navigation>
