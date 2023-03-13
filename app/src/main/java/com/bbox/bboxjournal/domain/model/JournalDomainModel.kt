@@ -1,6 +1,6 @@
-package com.bbox.bboxjournal.domain.model.home
+package com.bbox.bboxjournal.domain.model
 
-data class NoteDomainModel(
+data class JournalDomainModel(
     val id: Int,
     val note: String,
     val dateTime: String,

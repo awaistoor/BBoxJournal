@@ -1,18 +1,18 @@
 package com.bbox.bboxjournal.data.db.dao
 
 import androidx.room.*
-import com.bbox.bboxjournal.data.db.model.NoteEntityModel
+import com.bbox.bboxjournal.data.db.model.JournalEntityModel
 
 @Dao
 interface BBoxJournalDAO {
 
     @Insert(onConflict = OnConflictStrategy.ABORT)
-    fun insertNote(note: NoteEntityModel)
+    fun insertJournal(journal: JournalEntityModel)
 
-    @Query("SELECT * FROM note")
-    fun getAllNotes(): List<NoteEntityModel>
+    @Query("SELECT * FROM journal")
+    fun getAllJournals(): List<JournalEntityModel>
 
     @Delete
-    fun deleteNote(note: NoteEntityModel)
+    fun deleteJournal(journal: JournalEntityModel)
 
 }

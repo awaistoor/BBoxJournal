@@ -3,18 +3,18 @@ package com.bbox.bboxjournal.data.db.model
 import androidx.room.Embedded
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import com.bbox.bboxjournal.domain.model.home.NoteDomainModel
+import com.bbox.bboxjournal.domain.model.JournalDomainModel
 
-@Entity(tableName = "note")
-data class NoteEntityModel(
+@Entity(tableName = "journal")
+data class JournalEntityModel(
     @PrimaryKey val id: Int,
     val note: String,
     val dateTime: String,
     @Embedded val moodColor: MoodColorEntityModel
 )
 
-fun NoteEntityModel.toDomainModel(): NoteDomainModel {
-    return NoteDomainModel(
+fun JournalEntityModel.toDomainModel(): JournalDomainModel {
+    return JournalDomainModel(
         id = id,
         note = note,
         dateTime = dateTime,

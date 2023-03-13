@@ -3,7 +3,7 @@ package com.bbox.bboxjournal.data.db.model
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import com.bbox.bboxjournal.domain.model.home.MoodColorDomainModel
+import com.bbox.bboxjournal.domain.model.MoodColorDomainModel
 
 @Entity(tableName = "mood_color")
 data class MoodColorEntityModel(

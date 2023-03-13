@@ -1,4 +1,4 @@
-package com.bbox.bboxjournal.domain.model.home
+package com.bbox.bboxjournal.domain.model
 
 data class MoodColorDomainModel(
     val id: Int,
