@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">BBoxJournal</string>
     <string name="title_activity_main">MainActivity</string>
+    <string name="how_do_you_feel_right_now">How do you feel right now?</string>
+    <string name="save">Save</string>
+    <string name="write_here">Write here ...</string>
 </resources>
