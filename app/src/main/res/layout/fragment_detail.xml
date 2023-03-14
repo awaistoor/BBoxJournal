@@ -1,16 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="@dimen/_10dp"
+    app:cardCornerRadius="@dimen/_5dp"
+    app:cardElevation="@dimen/_5dp"
     android:layout_height="match_parent">
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Detail"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <View
+            android:id="@+id/cardBorder"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_8dp"
+            android:background="@color/teal_200"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="@dimen/_16dp"
+            android:layout_marginVertical="@dimen/_16dp"
+            app:layout_constraintBottom_toTopOf="@+id/tvJournalDate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardBorder">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvJournal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_18sp"
+                tools:text="Lorem ipsum dolor sit am0et, consectetur adipiscing elit. Etiam vitae feugiat tortor, ut pharetra arcu. Vivamus pulvinar dolor sed nibh ullamcorper, eu dictum eros maximus. Vivamus tempus massa vitae lectus fermentum sollicitudin. Aliquam erat volutpat. Aliquam egestas ultrices nunc. Proin quam dui, rhoncus sit amet semper quis, viverra at enim. Curabitur ultrices consectetur justo quis fringilla. Fusce pharetra felis urna, id dignissim neque ornare sed. Proin tempor hendrerit purus a vehicula. Aliquam erat volutpat. Sed convallis accumsan metus sit amet elementum. Mauris sollicitudin arcu et est euismod, ut facilisis risus bibendum. Pellentesque convallis semper tincidunt. Nam at accumsan mi. Mauris pretium sagittis fermentum. Mauris sit amet metus est. Mauris et lobortis mauris, vitae tempor neque. Donec ut eros tempus, euismod nisi in, porttitor mauris. Ut tempor ante nec congue tempus. Maecenas consequat nisl at libero pellentesque, ac vulputate eros molestie. Praesent at tortor neque." />
+        </androidx.core.widget.NestedScrollView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvJournalDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/_10dp"
+            android:textSize="@dimen/_14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="Feb 20, 2023 | 20:00" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</com.google.android.material.card.MaterialCardView>
