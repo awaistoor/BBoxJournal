@@ -26,11 +26,13 @@
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/cvMoodGreen"
             android:layout_width="0dp"
-            android:layout_height="40dp"
+            android:layout_height="@dimen/_40dp"
             android:layout_marginHorizontal="@dimen/_5dp"
             android:layout_marginVertical="@dimen/_10dp"
             android:checkable="true"
-            app:cardBackgroundColor="@color/teal_200"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardBackgroundColor="@color/green_500"
             app:cardCornerRadius="@dimen/_5dp"
             app:cardElevation="@dimen/_5dp"
             app:layout_constraintEnd_toStartOf="@id/cvMoodYellow"
@@ -40,10 +42,12 @@
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/cvMoodYellow"
             android:layout_width="0dp"
-            android:layout_height="40dp"
+            android:layout_height="@dimen/_40dp"
             android:layout_marginHorizontal="@dimen/_5dp"
             android:checkable="true"
-            app:cardBackgroundColor="@color/purple_200"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardBackgroundColor="@color/yellow_500"
             app:cardCornerRadius="@dimen/_5dp"
             app:cardElevation="@dimen/_5dp"
             app:layout_constraintEnd_toStartOf="@+id/cvMoodRed"
@@ -53,10 +57,12 @@
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/cvMoodRed"
             android:layout_width="0dp"
-            android:layout_height="40dp"
+            android:layout_height="@dimen/_40dp"
             android:layout_marginHorizontal="@dimen/_5dp"
             android:checkable="true"
-            app:cardBackgroundColor="@color/purple_700"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardBackgroundColor="@color/red_500"
             app:cardCornerRadius="@dimen/_5dp"
             app:cardElevation="@dimen/_5dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -80,11 +86,21 @@
             android:layout_marginVertical="@dimen/_10dp"
             android:hint="@string/write_here"
             android:gravity="start|top"
-            android:inputType="textLongMessage"
+            android:inputType="textMultiLine|textCapSentences"
             app:layout_constraintBottom_toTopOf="@+id/btnSave"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/divider" />
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/loader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@id/btnSave"
+            app:layout_constraintStart_toStartOf="@id/btnSave"
+            app:layout_constraintTop_toTopOf="@id/btnSave" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnSave"

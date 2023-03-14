@@ -4,4 +4,7 @@
     <string name="how_do_you_feel_right_now">How do you feel right now?</string>
     <string name="save">Save</string>
     <string name="write_here">Write here ...</string>
+    <string name="please_enter_a_note">Please enter a note</string>
+    <string name="something_went_wrong">Something went wrong. Please try again.</string>
+    <string name="journal_added">Journal added</string>
 </resources>
