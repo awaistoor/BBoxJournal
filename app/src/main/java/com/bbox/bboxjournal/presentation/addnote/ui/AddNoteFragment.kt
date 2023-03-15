@@ -10,7 +10,7 @@ import androidx.navigation.fragment.findNavController
 import com.bbox.bboxjournal.R
 import com.bbox.bboxjournal.databinding.FragmentAddNoteBinding
 import com.bbox.bboxjournal.presentation.addnote.viewmodel.AddNoteViewModel
-import com.bbox.bboxjournal.presentation.model.AddNoteUiModel
+import com.bbox.bboxjournal.presentation.model.JournalUiModel
 import com.bbox.bboxjournal.presentation.model.MoodColorUiModel
 import com.bbox.bboxjournal.utils.makeGone
 import com.bbox.bboxjournal.utils.makeVisible
@@ -39,7 +39,7 @@ class AddNoteFragment : Fragment() {
             if (performValidation()) {
                 val moodColor = getSelectedModeColor()
                 viewModel.saveJournal(
-                    AddNoteUiModel(
+                    JournalUiModel(
                         moodColor = moodColor,
                         note = binding.etNote.text.toString()
                     )

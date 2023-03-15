@@ -7,7 +7,7 @@ import androidx.lifecycle.viewModelScope
 import com.bbox.bboxjournal.domain.usecase.AddNoteUseCase
 import com.bbox.bboxjournal.domain.usecase.GetCurrentDateTimeUseCase
 import com.bbox.bboxjournal.presentation.addnote.ui.AddNoteViewState
-import com.bbox.bboxjournal.presentation.model.AddNoteUiModel
+import com.bbox.bboxjournal.presentation.model.JournalUiModel
 import com.bbox.bboxjournal.presentation.model.toJournalDomainModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
@@ -21,12 +21,13 @@ class AddNoteViewModel @Inject constructor(
     private val addNoteViewState = MutableLiveData<AddNoteViewState>()
     val addNoteUiState: LiveData<AddNoteViewState> = addNoteViewState
 
-    fun saveJournal(addNoteUiModel: AddNoteUiModel) {
+    fun saveJournal(journalUiModel: JournalUiModel) {
         viewModelScope.launch {
             addNoteViewState.postValue(AddNoteViewState.Loading)
             try {
                 val dateTime = getCurrentDateTimeUseCase.invoke()
-                addNoteUseCase.invoke(addNoteUiModel.toJournalDomainModel(dateTime = dateTime))
+                addNoteUseCase.invoke(journalUiModel.apply { this.dateTime = dateTime }
+                    .toJournalDomainModel())
                 addNoteViewState.postValue(AddNoteViewState.Success)
             } catch (ex: Exception) {
                 ex.printStackTrace()
