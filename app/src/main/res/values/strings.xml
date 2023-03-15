@@ -7,4 +7,5 @@
     <string name="please_enter_a_note">Please enter a note</string>
     <string name="something_went_wrong">Something went wrong. Please try again.</string>
     <string name="journal_added">Journal added</string>
+    <string name="delete">Delete</string>
 </resources>

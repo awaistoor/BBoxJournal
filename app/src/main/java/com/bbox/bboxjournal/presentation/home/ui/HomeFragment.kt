@@ -29,7 +29,7 @@ class HomeFragment : Fragment() {
     lateinit var convertDateTimeFormatUseCase: ConvertDateTimeFormatUseCase
     private val adapter by lazy {
         JournalListAdapter(convertDateTimeFormatUseCase) {
-            findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToDetailFragment())
+            findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToDetailFragment(it.id))
         }
     }
 

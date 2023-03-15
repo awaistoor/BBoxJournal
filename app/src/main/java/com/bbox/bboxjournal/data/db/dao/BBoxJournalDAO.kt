@@ -12,7 +12,10 @@ interface BBoxJournalDAO {
     @Query("SELECT * FROM journal")
     suspend fun getAllJournals(): List<JournalEntityModel>
 
-    @Delete
-    suspend fun deleteJournal(journal: JournalEntityModel)
+    @Query("DELETE FROM journal WHERE id =:journalId")
+    suspend fun deleteJournal(journalId: Int)
+
+    @Query("SELECT * FROM journal WHERE id =:journalId")
+    suspend fun getJournalById(journalId: Int): JournalEntityModel
 
 }

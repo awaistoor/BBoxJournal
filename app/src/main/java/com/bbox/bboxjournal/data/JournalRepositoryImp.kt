@@ -16,4 +16,12 @@ class JournalRepositoryImp @Inject constructor(private val bBoxJournalDAO: BBoxJ
     override suspend fun addJournal(journalDomainModel: JournalDomainModel) {
         bBoxJournalDAO.insertJournal(journalDomainModel.toEntityModel())
     }
+
+    override suspend fun getJournalById(journalId: Int): JournalDomainModel {
+        return bBoxJournalDAO.getJournalById(journalId).toDomainModel()
+    }
+
+    override suspend fun deleteJournal(journalId: Int) {
+        bBoxJournalDAO.deleteJournal(journalId)
+    }
 }

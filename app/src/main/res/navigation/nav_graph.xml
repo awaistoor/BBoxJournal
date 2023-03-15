@@ -20,7 +20,13 @@
     <fragment
         android:id="@+id/DetailFragment"
         android:name="com.bbox.bboxjournal.presentation.detail.ui.DetailFragment"
-        tools:layout="@layout/fragment_detail" />
+        tools:layout="@layout/fragment_detail">
+        <argument
+            android:name="journalId"
+            app:argType="integer"
+            app:nullable="false" />
+    </fragment>
+
     <fragment
         android:id="@+id/AddNoteFragment"
         android:name="com.bbox.bboxjournal.presentation.addnote.ui.AddNoteFragment"

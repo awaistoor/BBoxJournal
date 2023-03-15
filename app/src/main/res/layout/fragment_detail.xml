@@ -8,15 +8,26 @@
     app:cardElevation="@dimen/_5dp"
     android:layout_height="match_parent">
 
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/loader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:indeterminate="true"
+        android:visibility="gone" />
+
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clContainer"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        tools:visibility="visible">
 
         <View
             android:id="@+id/cardBorder"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_8dp"
-            android:background="@color/teal_200"
+            android:background="@color/green_500"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
