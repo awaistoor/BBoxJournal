@@ -51,6 +51,11 @@ class HomeFragment : Fragment() {
         }
     }
 
+    override fun onResume() {
+        super.onResume()
+        viewModel.getAllJournals()
+    }
+
     private fun setupListAdapter() {
         binding.rvJournal.adapter = adapter
     }

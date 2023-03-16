@@ -9,4 +9,5 @@
     <string name="journal_added">Journal added</string>
     <string name="delete">Delete</string>
     <string name="add_new_journal">Add New Journal</string>
+    <string name="add">Add</string>
 </resources>

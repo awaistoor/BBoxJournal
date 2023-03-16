@@ -14,6 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:indeterminate="true"
+        app:indicatorColor="@color/blue_500"
         android:visibility="gone" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -46,7 +47,7 @@
                 android:id="@+id/tvJournal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/_18sp"
+                style="@style/Theme.BBoxJournal.TextView.Content"
                 tools:text="Lorem ipsum dolor sit am0et, consectetur adipiscing elit. Etiam vitae feugiat tortor, ut pharetra arcu. Vivamus pulvinar dolor sed nibh ullamcorper, eu dictum eros maximus. Vivamus tempus massa vitae lectus fermentum sollicitudin. Aliquam erat volutpat. Aliquam egestas ultrices nunc. Proin quam dui, rhoncus sit amet semper quis, viverra at enim. Curabitur ultrices consectetur justo quis fringilla. Fusce pharetra felis urna, id dignissim neque ornare sed. Proin tempor hendrerit purus a vehicula. Aliquam erat volutpat. Sed convallis accumsan metus sit amet elementum. Mauris sollicitudin arcu et est euismod, ut facilisis risus bibendum. Pellentesque convallis semper tincidunt. Nam at accumsan mi. Mauris pretium sagittis fermentum. Mauris sit amet metus est. Mauris et lobortis mauris, vitae tempor neque. Donec ut eros tempus, euismod nisi in, porttitor mauris. Ut tempor ante nec congue tempus. Maecenas consequat nisl at libero pellentesque, ac vulputate eros molestie. Praesent at tortor neque." />
         </androidx.core.widget.NestedScrollView>
 
@@ -55,7 +56,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginVertical="@dimen/_10dp"
-            android:textSize="@dimen/_14sp"
+            style="@style/Theme.BBoxJournal.TextView.DateTime"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

@@ -18,10 +18,6 @@ class HomeViewModel @Inject constructor(private val getAllJournalsUseCase: GetAl
     private val homeViewState = MutableLiveData<HomeViewState>()
     val homeUiState: LiveData<HomeViewState> = homeViewState
 
-    init {
-        getAllJournals()
-    }
-
     fun getAllJournals() {
         viewModelScope.launch {
             homeViewState.postValue(HomeViewState.Loading)
@@ -52,7 +48,6 @@ class HomeViewModel @Inject constructor(private val getAllJournalsUseCase: GetAl
                         }
                     }
                 }
-
                 homeViewState.postValue(HomeViewState.Success(uiList))
             } catch (ex: Exception) {
                 ex.printStackTrace()
