@@ -1,5 +1,6 @@
 package com.bbox.bboxjournal.presentation.detail.viewmodel
 
+import androidx.annotation.VisibleForTesting
 import androidx.lifecycle.*
 import com.bbox.bboxjournal.domain.usecase.DeleteJournalUseCase
 import com.bbox.bboxjournal.domain.usecase.GetJournalByIdUseCase
@@ -28,6 +29,7 @@ class DetailViewModel @Inject constructor(
         loadDate(args.journalId)
     }
 
+    @VisibleForTesting(otherwise = VisibleForTesting.PRIVATE)
     fun loadDate(journalId: Int) {
         viewModelScope.launch {
             loadDetailViewState.postValue(DetailViewState.LoadDetailViewState.Loading)
