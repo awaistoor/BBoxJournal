@@ -8,4 +8,5 @@
     <string name="something_went_wrong">Something went wrong. Please try again.</string>
     <string name="journal_added">Journal added</string>
     <string name="delete">Delete</string>
+    <string name="add_new_journal">Add New Journal</string>
 </resources>

@@ -9,8 +9,8 @@ import javax.inject.Inject
 
 class JournalRepositoryImp @Inject constructor(private val bBoxJournalDAO: BBoxJournalDAO) :
     JournalRepository {
-    override suspend fun getAllJournals(): List<JournalDomainModel> {
-        return bBoxJournalDAO.getAllJournals().map { it.toDomainModel() }
+    override suspend fun getAllJournals(): MutableList<JournalDomainModel> {
+        return bBoxJournalDAO.getAllJournals().map { it.toDomainModel() }.toMutableList()
     }
 
     override suspend fun addJournal(journalDomainModel: JournalDomainModel) {

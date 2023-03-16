@@ -9,7 +9,7 @@ interface BBoxJournalDAO {
     @Insert(onConflict = OnConflictStrategy.ABORT)
     suspend fun insertJournal(journal: JournalEntityModel)
 
-    @Query("SELECT * FROM journal")
+    @Query("SELECT * FROM journal ORDER BY dateTime DESC")
     suspend fun getAllJournals(): List<JournalEntityModel>
 
     @Query("DELETE FROM journal WHERE id =:journalId")
