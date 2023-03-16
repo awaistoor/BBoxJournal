@@ -36,7 +36,7 @@ class JournalListAdapter(
                     parent,
                     false
                 )
-                JournalMonthHeaderViewHolder(binding)
+                JournalMonthHeaderViewHolder(parent.context, binding)
             }
             DAY_HEADER_VIEW -> {
                 val binding = LayoutJournalListDayHeaderBinding.inflate(
@@ -56,10 +56,10 @@ class JournalListAdapter(
                 getItem(position).listItem?.let { holder.bind(it) }
             }
             is JournalDayHeaderViewHolder -> {
-                getItem(position).headerText?.let { holder.bind(it) }
+                getItem(position).header?.let { holder.bind(it) }
             }
             is JournalMonthHeaderViewHolder -> {
-                getItem(position).headerText?.let { holder.bind(it) }
+                getItem(position).header?.let { holder.bind(it) }
             }
         }
     }
@@ -90,17 +90,23 @@ class JournalListAdapter(
 
     }
 
-    private inner class JournalMonthHeaderViewHolder(private val binding: LayoutJournalListMonthHeaderBinding) :
+    private inner class JournalMonthHeaderViewHolder(
+        private val context: Context,
+        private val binding: LayoutJournalListMonthHeaderBinding
+    ) :
         RecyclerView.ViewHolder(binding.root) {
-        fun bind(item: String) {
-            binding.tvMonth.text = item
+        fun bind(header: ListUiModel.HeaderUiModel) {
+            binding.tvMonth.text = header.headerTitle
+            binding.tvEntries.text = "${header.entriesCount} entries"
+            binding.cvMonthHeader.setBackgroundColor(context.getColor(header.headerColor.colorCode))
         }
     }
 
     private inner class JournalDayHeaderViewHolder(private val binding: LayoutJournalListDayHeaderBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun bind(item: String) {
-            binding.tvDay.text = item
+        fun bind(header: ListUiModel.HeaderUiModel) {
+            binding.tvDay.text = header.headerTitle
+            binding.tvEntries.text = "${header.entriesCount} entries"
         }
     }
 

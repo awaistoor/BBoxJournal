@@ -11,7 +11,18 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/_10dp"
         android:layout_marginVertical="@dimen/_5dp"
+        android:layout_gravity="start|center_vertical"
         style="@style/Theme.BBoxJournal.TextView.List.DayHeader"
         tools:text="Fri, 05" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvEntries"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_10dp"
+        android:layout_gravity="end|center_vertical"
+        android:layout_marginVertical="@dimen/_5dp"
+        style="@style/Theme.BBoxJournal.TextView.List.Header.Entries"
+        tools:text="2 entries" />
 
 </com.google.android.material.card.MaterialCardView>
