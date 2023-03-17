@@ -1,4 +1,4 @@
-<img src="https://www.bboxx.com/wp-content/uploads/WhatsApp-Image-2022-07-20-at-11.05.38-AM.jpeg"  height=150 alt="BBoxJournal App" />
+<img src="https://www.bboxx.com/wp-content/uploads/WhatsApp-Image-2022-07-20-at-11.05.38-AM.jpeg"  height=250 alt="BBoxJournal App" />
 
 # BBoxJournal App
 
@@ -7,6 +7,10 @@ An android and koltin based application as a technical challenge from BBox.
 ![Version v1.0 Badge][version-badge] ![Android 33+ Badge][android-version-badge] ![Kotlin 1.7.41 Badge][kotlin-version-badge]
 
 ## Demo
+
+
+
+https://user-images.githubusercontent.com/3141921/225912336-c57d7485-be06-4aa4-9e27-566060de946d.mp4
 
 
 
