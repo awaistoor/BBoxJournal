@@ -2,6 +2,10 @@ package com.bbox.bboxjournal.presentation.model
 
 import com.bbox.bboxjournal.domain.model.JournalDomainModel
 
+/**
+ * [JournalUiModel]
+ * A model class for presentation layer
+ */
 data class JournalUiModel(
     val id: Int = 0,
     val moodColor: MoodColorUiModel,
@@ -9,6 +13,11 @@ data class JournalUiModel(
     var dateTime: String = ""
 )
 
+/**
+ * [JournalUiModel.toJournalDomainModel]
+ * An extension function to convert [JournalUiModel] into [JournalDomainModel]
+ * @return [JournalDomainModel]
+ */
 fun JournalUiModel.toJournalDomainModel(): JournalDomainModel {
     return JournalDomainModel(
         id = id,
@@ -18,6 +27,12 @@ fun JournalUiModel.toJournalDomainModel(): JournalDomainModel {
     )
 }
 
+/**
+ * [JournalDomainModel.toJournalUiModel]
+ * An extension function to convert [JournalDomainModel] into [JournalUiModel]
+ * this function also convert moodColor into [MoodColorUiModel]
+ * @return [JournalUiModel]
+ */
 fun JournalDomainModel.toJournalUiModel(): JournalUiModel {
     return JournalUiModel(
         id = id,

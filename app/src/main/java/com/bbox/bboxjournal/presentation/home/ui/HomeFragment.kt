@@ -53,6 +53,7 @@ class HomeFragment : Fragment() {
 
     override fun onResume() {
         super.onResume()
+        // calling it on resume so that the list get updated whenever user come to this screen
         viewModel.getAllJournals()
     }
 
