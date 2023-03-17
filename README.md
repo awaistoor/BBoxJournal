@@ -8,11 +8,7 @@ An android and koltin based application as a technical challenge from BBox.
 
 ## Demo
 
-
-
-https://user-images.githubusercontent.com/3141921/225912336-c57d7485-be06-4aa4-9e27-566060de946d.mp4
-
-
+[device-2023-03-17-180215.webm](https://user-images.githubusercontent.com/3141921/225913337-5542f19d-c42b-45b0-a276-10c7513adf62.webm)
 
 
 #### Prerequisites
